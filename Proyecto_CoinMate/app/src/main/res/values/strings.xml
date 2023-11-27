@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CoinMate</string>
+
+    // Lenguaje (Español)
+    <string name="msg_languaje_selection">Selecciona tu idioma</string>
+    <string name="languaje_es">Español</string>
+    <string name="languaje_en">English</string>
+    <string name="languaje_actual">Español</string>
+    <string name="btn_goBack">Volver</string>
+
+    // MainActivity
+    <string name="msg_main_welcome">¡Bienvenido a CoinMate!</string>
+    <string name="et_main_hint">Usuario</string>
+    <string name="msg_main_advise">Primero introduce tu nombre de usuario</string>
+    <string name="btn_main_goto"> Creditos </string>
+
+    // CreditActivity
+    <string name="msg_credit_version">%s,  estas usando la versión 1.1</string>
+    <string name="msg_credit_info"> ¡CoinMate es tu aplicación perfecta para registrar tu colección de monedas!\n
+                                    Aquí podrás añadir información, imágenes y toda la info necesaria para diferenciar tus monedas.
+                                    También podrás compartir tus colecciones para que otras personas puedan verla\n
+                                    Además, ¡podrás contactar con otras personas para intercambiar tus monedas y completar tu colección!</string>
+    <string name="btn_credit_contact"> CONTACTAR </string>
+</resources>
