@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pastel_blue">#A2D2FF</color> // Utilizado para el fondo de la aplicación
+    <color name="pastel_green">#77E3BC</color> // Utilizado para los botones y las acciones principales
+    <color name="pastel_yellow">#FFD6A5</color> // Utilizado para las notificaciones y los mensajes de alerta
+    <color name="pastel_pink">#FFADAD</color> // Utilizado para los errores y los mensajes de advertencia
+    <color name="pastel_purple">#BDB2FF</color> // Utilizado para los elementos secundarios y las barras de navegación
+</resources>

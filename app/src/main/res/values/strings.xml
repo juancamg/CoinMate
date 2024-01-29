@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CoinMate</string>
+
+    // Lenguaje (Español)
+    <string name="msg_languaje_selection">Selecciona tu idioma</string>
+    <string name="languaje_es">Español</string>
+    <string name="languaje_en">English</string>
+    <string name="languaje_actual">Español</string>
+    <string name="btn_goBack">Volver</string>
+
+    // MainActivity
+    <string name="msg_main_welcome">¡Bienvenido a CoinMate!</string>
+    <string name="et_main_hint">Usuario</string>
+    <string name="msg_main_advise">Primero introduce tu nombre de usuario</string>
+    <string name="btn_main_goto"> Creditos </string>
+
+    // CreditActivity
+    <string name="msg_credit_version">%s,  estas usando la versión 1.1</string>
+</resources>
