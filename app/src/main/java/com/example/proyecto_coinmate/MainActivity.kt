@@ -1,33 +1,28 @@
 package com.example.proyecto_coinmate
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import androidx.core.view.setPadding
+import androidx.fragment.app.commit
+import com.example.proyecto_coinmate.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater) // Inflate the layout for this activity
+        setContentView(binding.root)
 
-        val btn_Main_goto = findViewById<Button>(R.id.btn_Main_goto)
-        val et_Main_name = findViewById<EditText>(R.id.et_Main_name)
-        val tv_Main_advise = findViewById<TextView>(R.id.tv_main_advise)
-
-        btn_Main_goto.setOnClickListener {
-            if (et_Main_name.text.isEmpty()) {
-                tv_Main_advise.text = getString(R.string.msg_main_advise)
-                tv_Main_advise.setPadding(20)
-            } else {
-                val intent = Intent(this, CreditActivity::class.java)
-                val name = et_Main_name.text.toString()
-                intent.putExtra("USER", name)
-                startActivity(intent)
-            }
-
+        // Show the LoginFragment con bindings
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add(R.id.fcv_mainActivity, LoginFragment())
         }
+
+
+
+
+
     }
 }
