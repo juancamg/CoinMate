@@ -1,19 +1,27 @@
 <resources>
     <string name="app_name">CoinMate</string>
-
     // Languaje (Español)
+
+    <!-- LoginFragment -->
+    <string name="msg_main_welcome">Bienvenido a CoinMate!</string>
+    <string name="et_main_hint">Usuario</string>
+    <string name="msg_main_advise">Primero introduce tu nombre</string>
+    <string name="btn_main_login">Iniciar sesión</string>
+
+    <!-- MenuFragment -->
+    <string name="msg_menu_welcome">%s, Bienvenido a CoinMate!</string>
+
+    <!-- CreditFragment -->
+    <string name="msg_credit_tittle">AJUSTES</string>
+    <string name="img_description_light">Modo claro</string>
+    <string name="img_description_dark">Modo oscuro</string>
+
+    <!-- sin categorizar -->
     <string name="msg_languaje_selection">Selecciona tu idioma</string>
     <string name="languaje_es">Español</string>
     <string name="languaje_en">English</string>
     <string name="languaje_actual">Español</string>
     <string name="btn_goBack">Volver</string>
-
-    // MainActivity
-    <string name="msg_main_welcome">Bienvenido a CoinMate!</string>
-    <string name="et_main_hint">Usuario</string>
-    <string name="msg_main_advise">Primero introduce tu nombre</string>
-    <string name="btn_main_goto">Creditos</string>
-
-    // CreditActivity
     <string name="msg_credit_version">%s, estás en la versión 1.1</string>
+
 </resources>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentLoginBinding
 
 
@@ -19,13 +20,21 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+        val btnLoginBinding = binding.btnLogin
+        val etUsuarioBinding = binding.etUsuario
+
+        btnLoginBinding.setOnClickListener{
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMenuFragment(user = etUsuarioBinding.text.toString().lowercase().replaceFirstChar(Char::uppercase)))
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.tvWelcome.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
-        binding.btnGoto.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnLogin.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.etUsuario.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
