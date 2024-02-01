@@ -8,7 +8,11 @@
         android:id="@+id/creditFragment"
         android:name="com.example.proyecto_coinmate.CreditFragment"
         android:label="fragment_credit"
-        tools:layout="@layout/fragment_credit" />
+        tools:layout="@layout/fragment_credit" >
+        <action
+            android:id="@+id/action_creditFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.proyecto_coinmate.MenuFragment"

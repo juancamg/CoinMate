@@ -17,22 +17,21 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun preSplashLogic() {
-    val sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE)
-    val nightMode = sharedPreferences.getBoolean("NIGHT_MODE", false)
-    val isNightModeActive = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+        val sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE)
+        val nightMode = sharedPreferences.getBoolean("NIGHT_MODE", false)
 
-    if (sharedPreferences.contains("NIGHT_MODE")) {
-        if (nightMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-        } else {
+        if (!sharedPreferences.contains("NIGHT_MODE")) {
+            with(sharedPreferences.edit()) {
+                putBoolean("NIGHT_MODE", false)
+                apply()
+            }
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        }
-    } else {
-        if (isNightModeActive) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            if (nightMode) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
     }
-}
 }

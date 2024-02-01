@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.proyecto_coinmate.databinding.FragmentLoginBinding
 import com.example.proyecto_coinmate.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment() {

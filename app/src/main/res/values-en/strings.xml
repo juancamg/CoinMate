@@ -2,6 +2,9 @@
     <string name="app_name">CoinMate</string>
     // Languaje (English)
 
+    <!-- General -->
+    <string name="btn_goBack">Go back</string>
+
     <!-- LoginFragment -->
     <string name="msg_main_welcome">Welcome to CoinMate!</string>
     <string name="et_main_hint">User</string>
@@ -12,15 +15,13 @@
     <string name="msg_menu_welcome">%s, Welcome to CoinMate!</string>
 
     <!-- CreditFragment -->
-    <string name="msg_credit_tittle">SETTINGS</string>
+    <string name="msg_credit_tittle">- SETTINGS -</string>
     <string name="img_description_light">Light mode</string>
     <string name="img_description_dark">Dark mode</string>
-
-    <!-- sin categorizar -->
-    <string name="msg_languaje_selection">Select your languaje</string>
     <string name="languaje_es">Español</string>
     <string name="languaje_en">English</string>
     <string name="languaje_actual">English</string>
-    <string name="btn_goBack">Go back</string>
-    <string name="msg_credit_version">%s, you are using version 1.1</string>
+
+    <!-- sin categorizar -->
+
 </resources>
