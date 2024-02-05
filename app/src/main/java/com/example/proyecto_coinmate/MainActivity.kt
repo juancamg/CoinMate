@@ -1,7 +1,6 @@
 package com.example.proyecto_coinmate
 
 import android.content.Context
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
@@ -13,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setAppTheme()
+        setAppLanguage()
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -31,16 +31,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setAppLanguage() {
+        // Se cargan las preferencias de lenguaje
         val sharedPreferences = getSharedPreferences("MODE", Context.MODE_PRIVATE)
         val language = sharedPreferences.getString("LANGUAGE", "en")
 
-        val locale = Locale(language)
-        Locale.setDefault(locale)
-
+        val recursos = resources
+        val displayMetrics = recursos.displayMetrics
         val config = resources.configuration
-        config.setLocale(locale)
-
-        val context = createConfigurationContext(config)
-        var resources = context.resources
+        config.setLocale(Locale(language))
+        recursos.updateConfiguration(config,displayMetrics)
+        config.locale=Locale(language)
+        resources.updateConfiguration(config,displayMetrics)
     }
 }

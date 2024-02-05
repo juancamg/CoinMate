@@ -2,19 +2,16 @@ package com.example.proyecto_coinmate
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.AppCompatDelegate.NightMode
 import androidx.appcompat.widget.SwitchCompat
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentCreditBinding
-import com.example.proyecto_coinmate.databinding.FragmentMenuBinding
-import java.util.Locale
+
 
 
 class CreditFragment : Fragment() {
@@ -54,10 +51,10 @@ class CreditFragment : Fragment() {
     }
 
     private fun nightMode() {
-        modeSwitch = binding.switchDarkMode
+        val modeSwitch = binding.switchDarkMode
 
-        sharedPreferences = activity?.getSharedPreferences("MODE", Context.MODE_PRIVATE)
-        nightMode = sharedPreferences?.getBoolean("NIGHT_MODE", false)!!
+        val sharedPreferences = activity?.getSharedPreferences("MODE", Context.MODE_PRIVATE)
+        val nightMode = sharedPreferences?.getBoolean("NIGHT_MODE", false)!!
 
         // Verifica el modo actual de la aplicación e inicializa el interruptor en la posición correspondiente
         modeSwitch.isChecked = nightMode
@@ -79,24 +76,18 @@ class CreditFragment : Fragment() {
 
     private fun languageMode() {
         val languageSwitch = binding.switchLanguaje
-
+        val sharedPreferences = activity?.getSharedPreferences("MODE", Context.MODE_PRIVATE)
         val languagePreference = sharedPreferences?.getString("LANGUAGE", "en")
 
-        // Remove the listener before setting the checked state
+        // Quitamos el lisener para evitar que se ejecute el código al cambiar el estado del interruptor
         languageSwitch.setOnCheckedChangeListener(null)
 
         // Verifica el idioma actual de la aplicación e inicializa el interruptor en la posición correspondiente
         languageSwitch.isChecked = languagePreference == "es"
 
         languageSwitch.setOnCheckedChangeListener { _, isChecked ->
-            val newLanguage = if (isChecked) "es" else "en"
-
             // Actualiza el idioma de la aplicación
-            val locale = Locale(newLanguage)
-            Locale.setDefault(locale)
-
-            val config = Configuration()
-            config.setLocale(locale)
+            val newLanguage = if (isChecked) "es" else "en"
 
             // Guarda la preferencia para futuros usos
             with(sharedPreferences?.edit()) {

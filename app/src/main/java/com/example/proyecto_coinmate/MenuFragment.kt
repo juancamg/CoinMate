@@ -34,6 +34,12 @@ class MenuFragment : Fragment() {
             val action = MenuFragmentDirections.actionMenuFragmentToCreditFragment()
             findNavController().navigate(action)
         }
+
+        val btnReturn = binding.btnReturn
+        btnReturn.setOnClickListener {
+            val action = MenuFragmentDirections.actionMenuFragmentToLoginFragment()
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {

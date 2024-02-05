@@ -3,7 +3,7 @@
     // Languaje (Español)
 
     <!-- General -->
-    <string name="btn_goBack">Volver</string>
+    <string name="btn_return">Volver</string>
 
     <!-- LoginFragment -->
     <string name="msg_main_welcome">Bienvenido a CoinMate!</string>

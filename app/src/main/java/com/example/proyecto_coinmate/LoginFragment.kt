@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentLoginBinding
@@ -26,6 +27,11 @@ class LoginFragment : Fragment() {
 
         btnLoginBinding.setOnClickListener{
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMenuFragment(user = etUsuarioBinding.text.toString().lowercase().replaceFirstChar(Char::uppercase)))
+        }
+
+        val iv_logo = binding.ivLogo
+        iv_logo.setOnClickListener{
+            Toast.makeText(context, "Made by Juan Carlos Maceras", Toast.LENGTH_LONG).show()
         }
 
         return binding.root
