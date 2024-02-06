@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            >
+
+            <ImageView
+                android:id="@+id/ivImagen"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/red"
+                />
+
+            <!-- Country -->
+            <TextView
+                android:id="@+id/tvTitulo1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/CountryTit"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCoinCountry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivImagen"
+                app:layout_constraintTop_toTopOf="@id/ivImagen"
+                app:layout_constraintVertical_chainStyle="packed"
+                />
+            <TextView
+                android:id="@+id/tvCoinCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                tools:text="España"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTitulo2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitulo1"
+                app:layout_constraintVertical_chainStyle="packed"
+                />
+
+            <!-- Value -->
+            <TextView
+                android:id="@+id/tvTitulo2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ValueTit"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCoinValue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@id/tvCoinCountry"
+                app:layout_constraintVertical_chainStyle="packed" />
+            <TextView
+                android:id="@+id/tvCoinValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                tools:text="1 euro"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvTitulo3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitulo2"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- Year -->
+            <TextView
+                android:id="@+id/tvTitulo3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/YearTit"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCoinYear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@id/tvCoinValue"
+                app:layout_constraintVertical_chainStyle="packed" />
+            <TextView
+                android:id="@+id/tvCoinYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                tools:text="2004"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivImagen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@id/tvTitulo3"
+                />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>

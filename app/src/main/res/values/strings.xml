@@ -13,16 +13,26 @@
 
     <!-- MenuFragment -->
     <string name="msg_menu_welcome">%s, Bienvenido a CoinMate!</string>
+    <string name="btn_collection">Mi colección</string>
+    <string name="btn_catalog">Catálogo</string>
 
     <!-- CreditFragment -->
-    <string name="msg_credit_tittle">- AJUSTES -</string>
+    <string name="credit_title">- AJUSTES -</string>
     <string name="img_description_light">Modo claro</string>
     <string name="img_description_dark">Modo oscuro</string>
     <string name="languaje_es">Español</string>
     <string name="languaje_en">English</string>
     <string name="languaje_actual">Español</string>
 
-    <!-- sin categorizar -->
+    <!-- ItemList -->
+    <string name="item_list_title">- CATÁLOGO -</string>
 
+    <!-- item_coins -->
+    <string name="CountryTit">Pais</string>
+    <string name="YearTit">Año</string>
+    <string name="ValueTit">Valor</string>
+
+
+    <!-- sin categorizar -->
 
 </resources>

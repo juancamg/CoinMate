@@ -29,6 +29,12 @@ class MenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mostrarMensaje()
 
+        val btnCatalog = binding.btnCatalog
+        btnCatalog.setOnClickListener {
+            val action = MenuFragmentDirections.actionMenuFragmentToItemListFragment()
+            findNavController().navigate(action)
+        }
+
         val btnSettings = binding.imgSettings
         btnSettings.setOnClickListener {
             val action = MenuFragmentDirections.actionMenuFragmentToCreditFragment()
