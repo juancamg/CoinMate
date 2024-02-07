@@ -26,6 +26,7 @@
 
     <!-- ItemList -->
     <string name="item_list_title">- CATÁLOGO -</string>
+    <string name="item_image_description">Imagen de la moneda</string>
 
     <!-- item_coins -->
     <string name="CountryTit">Pais</string>

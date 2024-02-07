@@ -32,7 +32,8 @@
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:background="@color/red"
+                android:contentDescription="@string/item_image_description"
+
                 />
 
             <!-- Country -->
@@ -125,6 +126,20 @@
                 app:layout_constraintStart_toEndOf="@id/ivImagen"
                 app:layout_constraintTop_toBottomOf="@id/tvTitulo3"
                 />
+
+            <CheckBox
+                android:id="@+id/cbFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_favourite_item"
+                android:theme="@style/favourite_checkbox"
+                app:useMaterialThemeColors="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                />
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>

@@ -38,17 +38,26 @@ class ItemListFragment : Fragment() {
     }
 
 
-    fun iniciarRecyclerViewVert(){
+    fun iniciarRecyclerViewVert() {
         val manager = LinearLayoutManager(requireContext())
         binding.RVCoins.layoutManager = manager
-        binding.RVCoins.adapter = CoinAdapter(CoinProvider.listaCoins, { coins -> onItemSelected(coins) })
+        binding.RVCoins.adapter = CoinAdapter(
+            CoinProvider.listaCoins,
+            { coins -> onItemSelected(coins) },
+            object : CoinAdapter.OnFavouriteClickListener {
+                override fun onFavouriteSelected(item: Coins) {
+                    Toast.makeText(requireContext(),"Añadido a favoritos", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onFavouriteDeselected(item: Coins) {
+                    Toast.makeText(requireContext(),"Eliminado de favoritos", Toast.LENGTH_SHORT).show()
+                }
+            }
+        )
     }
 
     private fun onItemSelected(coins: Coins) {
-    Toast.makeText(
-        requireContext(),
-        coins.valor,
-        Toast.LENGTH_SHORT
-    ).show()
-}
+        val action = ItemListFragmentDirections.actionItemListFragmentToDetailItemFragment(coins.id)
+        findNavController().navigate(action)
+    }
 }
