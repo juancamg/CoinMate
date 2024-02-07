@@ -26,6 +26,7 @@
 
     <!-- ItemList -->
     <string name="item_list_title">- CATALOG -</string>
+    <string name="item_image_description">Coin image</string>
 
     <!-- item_coins -->
     <string name="CountryTit">Country</string>

@@ -1,6 +1,5 @@
 <resources>
-    <color name="red">#FF0000</color>
-    <color name="green">#00FF00</color>
+    <color name="colorAccent">#E43437</color>
 
     <color name="md_theme_primary">#2D628B</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
