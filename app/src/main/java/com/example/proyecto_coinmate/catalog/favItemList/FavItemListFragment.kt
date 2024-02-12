@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.proyecto_coinmate.catalog.Coins
 import com.example.proyecto_coinmate.catalog.CoinProvider
-import com.example.proyecto_coinmate.catalog.itemList.ItemListFragmentDirections
 import com.example.proyecto_coinmate.catalog.adapter.CoinAdapter
 import com.example.proyecto_coinmate.databinding.FragmentFavItemListBinding
 
