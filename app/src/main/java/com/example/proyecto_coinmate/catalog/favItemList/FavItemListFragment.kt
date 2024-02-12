@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.proyecto_coinmate.R
 import com.example.proyecto_coinmate.catalog.Coins
 import com.example.proyecto_coinmate.catalog.CoinProvider
-import com.example.proyecto_coinmate.catalog.itemList.ItemListFragmentDirections
 import com.example.proyecto_coinmate.catalog.adapter.CoinAdapter
 import com.example.proyecto_coinmate.databinding.FragmentFavItemListBinding
 
@@ -38,6 +39,8 @@ class FavItemListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+        binding.tvFavItemListTittle.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     fun iniciarRecyclerViewVert() {

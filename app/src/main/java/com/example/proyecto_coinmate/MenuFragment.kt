@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentMenuBinding
 
@@ -50,6 +51,12 @@ class MenuFragment : Fragment() {
             val action = MenuFragmentDirections.actionMenuFragmentToLoginFragment()
             findNavController().navigate(action)
         }
+
+        binding.tvWelcome.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnCatalog.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnCollection.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+
     }
 
     override fun onDestroyView() {

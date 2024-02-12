@@ -1,0 +1,212 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".catalog.itemList.DetailItemFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDetailCoin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnReturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="60dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="15dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/tvDetailItemListTittle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/detail_item_list_title"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:id="@+id/ivImagen"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/item_image_description"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tvDetailItemListTittle" />
+
+            <CheckBox
+                android:id="@+id/cbFav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:button="@drawable/selector_favourite_item"
+                android:theme="@style/favourite_checkbox"
+                app:layout_constraintEnd_toStartOf="@id/ivImagen"
+                app:layout_constraintTop_toTopOf="@id/ivImagen"
+                app:useMaterialThemeColors="true" />
+
+            <LinearLayout
+                android:id="@+id/llCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailItemListTittle"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tvTitulo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/CountryTit"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvCoinCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="España" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/llCountry">
+
+                <TextView
+                    android:id="@+id/tvTitulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ValueTit"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvCoinValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="1 Euro" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/llValue">
+
+                <TextView
+                    android:id="@+id/tvTitulo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/YearTit"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvCoinYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="2002" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/ivImagen"
+                app:layout_constraintTop_toBottomOf="@+id/llYear">
+
+                <TextView
+                    android:id="@+id/tvTitulo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DetallesTit"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <TextView
+                    android:id="@+id/tvCoinDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    tools:text="Info extra" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_return"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_start_color"
+        android:contentDescription="@string/fav_item_fab_description"
+        android:tint="@color/material_on_background_emphasis_high_type"
+        app:srcCompat="@drawable/round_comment_24"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReturn"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30dp"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

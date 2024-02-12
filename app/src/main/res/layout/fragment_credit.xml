@@ -66,6 +66,7 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tvLanguajeEN"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/languaje_en"
@@ -82,6 +83,7 @@
             />
 
         <TextView
+            android:id="@+id/tvLanguajeES"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/languaje_es"

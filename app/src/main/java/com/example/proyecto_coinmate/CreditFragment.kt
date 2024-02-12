@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.os.LocaleListCompat
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentCreditBinding
@@ -37,6 +38,11 @@ class CreditFragment : Fragment() {
             val action = CreditFragmentDirections.actionCreditFragmentToMenuFragment()
             findNavController().navigate(action)
         }
+
+        binding.tvCreditTittle.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvLanguajeEN.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvLanguajeES.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     override fun onDestroyView() {

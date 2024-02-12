@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.catalog.CoinProvider
 import com.example.proyecto_coinmate.databinding.FragmentUserInfoBinding
@@ -33,6 +34,11 @@ class UserInfoFragment : Fragment() {
             val action = UserInfoFragmentDirections.actionUserInfoFragmentToMenuFragment()
             findNavController().navigate(action)
         }
+
+        binding.tvCreditTittle.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvUserName.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvFavCount.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     private fun mostrarDatos() {

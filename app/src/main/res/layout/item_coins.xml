@@ -51,6 +51,7 @@
                 app:layout_constraintStart_toEndOf="@+id/ivImagen"
                 app:layout_constraintTop_toTopOf="@id/ivImagen"
                 app:layout_constraintVertical_chainStyle="packed"
+                android:fontFamily="@font/cagliostro_regular"
                 />
             <TextView
                 android:id="@+id/tvCoinCountry"
@@ -81,7 +82,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivImagen"
                 app:layout_constraintTop_toBottomOf="@id/tvCoinCountry"
-                app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintVertical_chainStyle="packed"
+                android:fontFamily="@font/cagliostro_regular"/>
             <TextView
                 android:id="@+id/tvCoinValue"
                 android:layout_width="0dp"
@@ -110,7 +112,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ivImagen"
                 app:layout_constraintTop_toBottomOf="@id/tvCoinValue"
-                app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintVertical_chainStyle="packed"
+                android:fontFamily="@font/cagliostro_regular"/>
             <TextView
                 android:id="@+id/tvCoinYear"
                 android:layout_width="0dp"
