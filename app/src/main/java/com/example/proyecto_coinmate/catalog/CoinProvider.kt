@@ -1,7 +1,5 @@
 package com.example.proyecto_coinmate.catalog
 
-import com.example.proyecto_coinmate.catalog.Coins
-
 class CoinProvider {
     companion object {
         val listaCoins = mutableListOf<Coins>(
