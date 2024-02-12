@@ -35,14 +35,16 @@
     <string name="item_image_description">Imagen de la moneda</string>
     <string name="btn_favourites">Favoritos</string>
 
-    <!-- FavItemList -->
-    <string name="fav_item_list_title">- FAVORITOS -</string>
-
     <!-- DetailItemList -->
     <string name="detail_item_list_title">- DETALLES -</string>
 
+    <!-- FavItemList -->
+    <string name="fav_item_list_title">- FAVORITOS -</string>
+
+    <!-- FavDetailItemList -->
+    <string name="fav_item_fab_description">Añadir comentario</string>
+
     <!-- TODO
-        Meter descripciones a cada moneda
         Guardar comentarios de monedas y guardarlos.
     -->
 

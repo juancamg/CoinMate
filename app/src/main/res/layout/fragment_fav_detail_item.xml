@@ -178,4 +178,18 @@ tools:context=".catalog.favItemList.FavDetailItemFragment">
     android:layout_marginBottom="30dp"
     />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/round_comment_24"
+        android:background="@color/cardview_shadow_start_color"
+        android:tint="@color/material_on_background_emphasis_high_type"
+        android:contentDescription="@string/fav_item_fab_description"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

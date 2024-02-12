@@ -50,7 +50,7 @@ class FavItemListFragment : Fragment() {
     }
 
     private fun onItemSelected(coins: Coins) {
-        val action = ItemListFragmentDirections.actionItemListFragmentToDetailItemFragment(coins.id)
+        val action = FavItemListFragmentDirections.actionFavItemListFragmentToFavDetailItemFragment(coins.id)
         findNavController().navigate(action)
     }
 }

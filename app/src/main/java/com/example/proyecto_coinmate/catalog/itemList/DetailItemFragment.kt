@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -62,9 +63,11 @@ class DetailItemFragment : Fragment() {
             it.favourite = isChecked
 
             if (isChecked) {
-                CoinProvider.listaFavoritos.add(it)
+                CoinProvider.listaFavoritos.add(coin!!)
+                Toast.makeText(this.context, "Añadido a favoritos", Toast.LENGTH_SHORT).show()
             } else {
-                CoinProvider.listaFavoritos.remove(it)
+                CoinProvider.listaFavoritos.remove(coin!!)
+                Toast.makeText(this.context, "Quitado de favoritos", Toast.LENGTH_SHORT).show()
             }
         }
     }

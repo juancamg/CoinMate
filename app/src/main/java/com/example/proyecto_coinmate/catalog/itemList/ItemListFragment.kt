@@ -44,7 +44,6 @@ class ItemListFragment : Fragment() {
 
     }
 
-
     fun iniciarRecyclerViewVert() {
         val manager = LinearLayoutManager(requireContext())
         binding.RVCoins.layoutManager = manager
