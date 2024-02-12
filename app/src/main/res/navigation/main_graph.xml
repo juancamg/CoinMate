@@ -21,16 +21,15 @@
         <action
             android:id="@+id/action_menuFragment_to_creditFragment"
             app:destination="@id/creditFragment" />
-        <argument
-            android:name="user"
-            app:argType="string"
-            android:defaultValue="Guest" />
         <action
             android:id="@+id/action_menuFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_menuFragment_to_itemListFragment"
             app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -91,5 +90,14 @@
         <action
             android:id="@+id/action_favDetailItemFragment_to_favItemListFragment"
             app:destination="@id/favItemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.proyecto_coinmate.UserInfoFragment"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfoFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
 </navigation>

@@ -10,16 +10,31 @@
 
     <ImageView
         android:id="@+id/imgSettings"
-        android:layout_width="35dp"
+        android:layout_width="40dp"
         android:layout_height="35dp"
         android:src="@drawable/round_settings_24"
-        android:contentDescription="@string/img_description_light"
+        android:contentDescription="@string/img_description_settings"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="30dp"
         />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imgUserInfo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/round_account_circle_24"
+        android:contentDescription="@string/img_description_userInfo"
+
+        app:layout_constraintEnd_toStartOf="@id/imgSettings"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        />
+
+
 
     <TextView
         android:id="@+id/tv_Welcome"
