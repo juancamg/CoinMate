@@ -1,13 +1,14 @@
-package com.example.proyecto_coinmate.catalog
+package com.example.proyecto_coinmate.catalog.itemList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.proyecto_coinmate.catalog.CoinProvider
+import com.example.proyecto_coinmate.catalog.Coins
 import com.example.proyecto_coinmate.catalog.adapter.CoinAdapter
 import com.example.proyecto_coinmate.databinding.FragmentItemListBinding
 
@@ -35,6 +36,12 @@ class ItemListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+        val btnFav = binding.btnFav
+        btnFav.setOnClickListener {
+            val action = ItemListFragmentDirections.actionItemListFragmentToFavItemListFragment()
+            findNavController().navigate(action)
+        }
+
     }
 
 
@@ -44,15 +51,6 @@ class ItemListFragment : Fragment() {
         binding.RVCoins.adapter = CoinAdapter(
             CoinProvider.listaCoins,
             { coins -> onItemSelected(coins) },
-            object : CoinAdapter.OnFavouriteClickListener {
-                override fun onFavouriteSelected(item: Coins) {
-                    Toast.makeText(requireContext(),"Añadido a favoritos", Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onFavouriteDeselected(item: Coins) {
-                    Toast.makeText(requireContext(),"Eliminado de favoritos", Toast.LENGTH_SHORT).show()
-                }
-            }
         )
     }
 

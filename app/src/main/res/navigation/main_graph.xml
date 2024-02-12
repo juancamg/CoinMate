@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/itemListFragment"
-        android:name="com.example.proyecto_coinmate.catalog.ItemListFragment"
+        android:name="com.example.proyecto_coinmate.catalog.itemList.ItemListFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" >
         <action
@@ -52,10 +52,13 @@
         <action
             android:id="@+id/action_itemListFragment_to_detailItemFragment"
             app:destination="@id/detailItemFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_favItemListFragment"
+            app:destination="@id/favItemListFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailItemFragment"
-        android:name="com.example.proyecto_coinmate.catalog.DetailItemFragment"
+        android:name="com.example.proyecto_coinmate.catalog.itemList.DetailItemFragment"
         android:label="fragment_detail_item"
         tools:layout="@layout/fragment_detail_item" >
         <argument
@@ -64,5 +67,29 @@
         <action
             android:id="@+id/action_detailItemFragment_to_itemListFragment"
             app:destination="@id/itemListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favItemListFragment"
+        android:name="com.example.proyecto_coinmate.catalog.favItemList.FavItemListFragment"
+        android:label="fragment_fav_item_list"
+        tools:layout="@layout/fragment_fav_item_list" >
+        <action
+            android:id="@+id/action_favItemListFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_favItemListFragment_to_favDetailItemFragment"
+            app:destination="@id/favDetailItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favDetailItemFragment"
+        android:name="com.example.proyecto_coinmate.catalog.favItemList.FavDetailItemFragment"
+        android:label="fragment_fav_detail_item"
+        tools:layout="@layout/fragment_fav_detail_item" >
+        <argument
+            android:name="coinId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_favDetailItemFragment_to_favItemListFragment"
+            app:destination="@id/favItemListFragment" />
     </fragment>
 </navigation>

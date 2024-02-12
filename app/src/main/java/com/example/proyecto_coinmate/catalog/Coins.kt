@@ -5,6 +5,7 @@ data class Coins(
     val pais: String,
     val anno: String,
     val valor: String,
+    val detalles: String,
     val imagen: String,
     var favourite: Boolean
 )

@@ -24,14 +24,29 @@
     <string name="languaje_en">English</string>
     <string name="languaje_actual">Español</string>
 
-    <!-- ItemList -->
-    <string name="item_list_title">- CATÁLOGO -</string>
-    <string name="item_image_description">Imagen de la moneda</string>
-
     <!-- item_coins -->
     <string name="CountryTit">Pais</string>
     <string name="YearTit">Año</string>
     <string name="ValueTit">Valor</string>
+    <string name="DetallesTit">Detalles</string>
+
+    <!-- ItemList -->
+    <string name="item_list_title">- CATÁLOGO -</string>
+    <string name="item_image_description">Imagen de la moneda</string>
+    <string name="btn_favourites">Favoritos</string>
+
+    <!-- FavItemList -->
+    <string name="fav_item_list_title">- FAVORITOS -</string>
+
+    <!-- DetailItemList -->
+    <string name="detail_item_list_title">- DETALLES -</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO
+        Meter descripciones a cada moneda
+        Guardar comentarios de monedas y guardarlos.
+    -->
 
 
     <!-- sin categorizar -->

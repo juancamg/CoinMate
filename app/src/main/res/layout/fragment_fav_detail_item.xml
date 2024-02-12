@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".catalog.favItemList.FavDetailItemFragment">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardDetailCoin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintBottom_toTopOf="@+id/btnReturn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/tvDetailItemListTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_item_list_title"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivImagen"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDetailItemListTittle"
+            android:contentDescription="@string/item_image_description"
+            />
+
+        <CheckBox
+            android:id="@+id/cbFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_favourite_item"
+            android:theme="@style/favourite_checkbox"
+            app:useMaterialThemeColors="true"
+            app:layout_constraintTop_toTopOf="@id/ivImagen"
+            app:layout_constraintStart_toEndOf="@id/ivImagen"
+            android:layout_marginStart="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvTitulo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CountryTit"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/ivImagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvCoinCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="España"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTitulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ValueTit"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoinCountry"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvCoinValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1 Euro"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTitulo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/YearTit"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoinValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvCoinYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2002"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvTitulo4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DetallesTit"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoinYear"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvCoinDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Info extra"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+<Button
+    android:id="@+id/btnReturn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_return"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="30dp"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

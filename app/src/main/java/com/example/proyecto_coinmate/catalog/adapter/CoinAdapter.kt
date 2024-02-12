@@ -2,14 +2,15 @@ package com.example.proyecto_coinmate.catalog.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyecto_coinmate.R
 import com.example.proyecto_coinmate.catalog.Coins
+import com.example.proyecto_coinmate.catalog.CoinProvider
 
 class CoinAdapter(
     private val coinLista: List<Coins>,
     private val onClickListener: (Coins) -> Unit,
-    private val favouriteClickListener: OnFavouriteClickListener
 ) : RecyclerView.Adapter<CoinViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,25 +22,21 @@ class CoinAdapter(
     }
 
     override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
-    val item = coinLista[position]
-    holder.render(item, onClickListener)
+        val item = coinLista[position]
+        holder.render(item, onClickListener)
 
-    holder.binding.cbFav.isChecked = item.favourite
+        holder.binding.cbFav.isChecked = item.favourite
 
-    holder.binding.cbFav.setOnCheckedChangeListener { _, isChecked ->
-        val coin = coinLista.find { it == item }
-        coin?.favourite = isChecked
-
-        if (isChecked) {
-            favouriteClickListener.onFavouriteSelected(item)
-        } else {
-            favouriteClickListener.onFavouriteDeselected(item)
+        holder.binding.cbFav.setOnCheckedChangeListener { _, isChecked ->
+            val coin = coinLista.find { it == item }
+            coin?.favourite = isChecked
+            if (isChecked) {
+                CoinProvider.listaFavoritos.add(coin!!)
+                Toast.makeText(holder.itemView.context, "Añadido a favoritos", Toast.LENGTH_SHORT).show()
+            } else {
+                CoinProvider.listaFavoritos.remove(coin!!)
+                Toast.makeText(holder.itemView.context, "Quitado de favoritos", Toast.LENGTH_SHORT).show()
+            }
         }
-    }
-}
-
-    interface OnFavouriteClickListener {
-        fun onFavouriteSelected(item: Coins)
-        fun onFavouriteDeselected(item: Coins)
     }
 }
