@@ -9,6 +9,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
@@ -31,8 +32,9 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mostrarMensaje()
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.main_menu_title)
 
+        mostrarMensaje()
 
         val btnCatalog = binding.btnCatalog
         btnCatalog.setOnClickListener {
@@ -40,28 +42,9 @@ class MenuFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        val btnSettings = binding.imgSettings
-        btnSettings.setOnClickListener {
-            val action = MenuFragmentDirections.actionMenuFragmentToCreditFragment()
-            findNavController().navigate(action)
-        }
-
-        val btnUserInfo = binding.imgUserInfo
-        btnUserInfo.setOnClickListener {
-            val action = MenuFragmentDirections.actionMenuFragmentToUserInfoFragment()
-            findNavController().navigate(action)
-        }
-
-        val btnReturn = binding.btnReturn
-        btnReturn.setOnClickListener {
-            val action = MenuFragmentDirections.actionMenuFragmentToLoginFragment()
-            findNavController().navigate(action)
-        }
-
         binding.tvWelcome.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.btnCatalog.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.btnCollection.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
-        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
 
         val menuHost: MenuHost = requireActivity()
         menuHost.addMenuProvider(object : MenuProvider {

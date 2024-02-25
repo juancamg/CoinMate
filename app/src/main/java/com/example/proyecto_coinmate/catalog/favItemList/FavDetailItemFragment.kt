@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.proyecto_coinmate.R
@@ -41,14 +41,9 @@ class FavDetailItemFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.detail_item_list_title)
 
         rellenarDetalles(args.coinId)
-
-        val btnReturn = binding.btnReturn
-        btnReturn.setOnClickListener {
-            val action = FavDetailItemFragmentDirections.actionFavDetailItemFragmentToFavItemListFragment()
-            findNavController().navigate(action)
-        }
 
         val fabComment = binding.fabComment
         fabComment.setOnClickListener {
@@ -64,7 +59,6 @@ class FavDetailItemFragment : Fragment() {
         binding.tvCoinYear.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.tvTitulo4.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.tvCoinDetails.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
-        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     fun rellenarDetalles(coinId: String) {

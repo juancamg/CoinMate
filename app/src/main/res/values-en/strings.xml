@@ -6,6 +6,7 @@
     <string name="btn_return">Go back</string>
 
     <!-- LoginFragment -->
+    <string name="login_title">- LOGIN -</string>
     <string name="msg_main_welcome">Welcome to CoinMate!</string>
     <string name="et_main_hint">User</string>
     <string name="msg_main_advise">First introduce your user name</string>

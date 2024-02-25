@@ -40,31 +40,31 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Navegacion del bottomNav
         binding.bottomNavigationView.setOnItemSelectedListener { item ->
     when (item.itemId) {
-        R.id.bottom_principal -> {
-            // Verifica si el destino actual no es fragment_menu antes de navegar
-            if (navController.currentDestination?.id != R.id.menuFragment) {
-                navController.navigate(R.id.menuFragment)
-            }
-            true
-        }
         R.id.bottom_catalogo -> {
-            // Verifica si el destino actual no es item_list antes de navegar
             if (navController.currentDestination?.id != R.id.itemListFragment) {
                 navController.navigate(R.id.itemListFragment)
             }
             true
         }
         R.id.bottom_favorites -> {
-            // Verifica si el destino actual no es fav_item_list antes de navegar
             if (navController.currentDestination?.id != R.id.favItemListFragment) {
                 navController.navigate(R.id.favItemListFragment)
             }
             true
         }
+        R.id.bottom_userInfo -> {
+            if (navController.currentDestination?.id != R.id.userInfoFragment) {
+                navController.navigate(R.id.userInfoFragment)
+            }
+            true
+        }
         else -> false
     }
+
+
 }
     }
 

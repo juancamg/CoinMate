@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,24 +30,11 @@ class ItemListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.item_list_title)
 
         iniciarRecyclerViewVert()
 
-        val btnReturn = binding.btnReturn
-        btnReturn.setOnClickListener {
-            val action = ItemListFragmentDirections.actionItemListFragmentToMenuFragment()
-            findNavController().navigate(action)
-        }
-
-        val btnFav = binding.btnFav
-        btnFav.setOnClickListener {
-            val action = ItemListFragmentDirections.actionItemListFragmentToFavItemListFragment()
-            findNavController().navigate(action)
-        }
-
         binding.tvItemListTittle.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
-        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
-        binding.btnFav.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     fun iniciarRecyclerViewVert() {
