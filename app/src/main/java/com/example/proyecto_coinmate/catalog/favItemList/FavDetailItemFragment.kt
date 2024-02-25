@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.res.ResourcesCompat
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.example.proyecto_coinmate.R
 import com.example.proyecto_coinmate.catalog.CoinProvider
 import com.example.proyecto_coinmate.catalog.Coins
 import com.example.proyecto_coinmate.databinding.FragmentFavDetailItemBinding
@@ -53,6 +55,16 @@ class FavDetailItemFragment : Fragment() {
             showCommentDialog()
         }
 
+        binding.tvDetailItemListTittle.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvTitulo1.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvCoinCountry.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvTitulo2.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvCoinValue.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvTitulo3.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvCoinYear.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvTitulo4.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.tvCoinDetails.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
+        binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
     }
 
     fun rellenarDetalles(coinId: String) {

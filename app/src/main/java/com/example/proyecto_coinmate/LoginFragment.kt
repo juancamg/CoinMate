@@ -1,5 +1,6 @@
 package com.example.proyecto_coinmate
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,7 +27,11 @@ class LoginFragment : Fragment() {
         val etUsuarioBinding = binding.etUsuario
 
         btnLoginBinding.setOnClickListener{
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMenuFragment(user = etUsuarioBinding.text.toString().lowercase().replaceFirstChar(Char::uppercase)))
+            val user = etUsuarioBinding.text.toString().lowercase().replaceFirstChar(Char::uppercase)
+            val sharedPreferences = requireActivity().getSharedPreferences("PREFS", Context.MODE_PRIVATE)
+            sharedPreferences.edit().putString("user", user).apply()
+
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMenuFragment())
         }
 
         val iv_logo = binding.ivLogo

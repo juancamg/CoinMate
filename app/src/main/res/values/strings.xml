@@ -15,6 +15,8 @@
     <string name="msg_menu_welcome">%s, Bienvenido a CoinMate!</string>
     <string name="btn_collection">Mi colección</string>
     <string name="btn_catalog">Catálogo</string>
+    <string name="img_description_settings">Ajustes</string>
+    <string name="img_description_userInfo">Informacion usuario</string>
 
     <!-- CreditFragment -->
     <string name="credit_title">- AJUSTES -</string>
@@ -23,6 +25,14 @@
     <string name="languaje_es">Español</string>
     <string name="languaje_en">English</string>
     <string name="languaje_actual">Español</string>
+
+    <!-- UserInfoFragment -->
+    <string name="user_info_title">- USUARIO -</string>
+    <string name="user_name">Nombre de usuario: %s</string>
+    <string name="user_fav_Count0">Ninguna moneda marcada como favorita</string>
+    <string name="user_fav_Count1">%s moneda marcada como favorita</string>
+    <string name="user_fav_Count">%s monedas marcadas como favoritas</string>
+
 
     <!-- item_coins -->
     <string name="CountryTit">Pais</string>
