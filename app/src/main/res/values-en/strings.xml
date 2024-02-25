@@ -12,6 +12,7 @@
     <string name="btn_main_login">Login</string>
 
     <!-- MenuFragment -->
+    <string name="main_menu_title">- MAIN -</string>
     <string name="msg_menu_welcome">%s, Welcome to CoinMate!</string>
     <string name="btn_collection">My collection</string>
     <string name="btn_catalog">Catalog</string>

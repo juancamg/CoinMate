@@ -4,9 +4,15 @@ import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.proyecto_coinmate.databinding.FragmentMenuBinding
 
@@ -57,6 +63,26 @@ class MenuFragment : Fragment() {
         binding.btnCollection.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
         binding.btnReturn.typeface = ResourcesCompat.getFont(requireContext(), R.font.font_cagliostro_regular)
 
+        val menuHost: MenuHost = requireActivity()
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.options_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.settings_menu -> {
+                        findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToCreditFragment())
+                        true
+                    }
+                    R.id.userInfo_menu -> {
+                        findNavController().navigate(MenuFragmentDirections.actionMenuFragmentToUserInfoFragment())
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
     }
 
     override fun onDestroyView() {
